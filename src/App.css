@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.logo {
+  width: 200px;
+  height: 40px;
+  object-fit: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.header {
+  display: flex;
+  position: absolute;
+  min-width: 100vw;
   min-height: 100vh;
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header::before{
+  position: absolute;
+  background-color: #161313;
+  background-image:url('./Assets/land.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  content: '';
+  z-index: -100;
+  transform: scale(1.5);
+}
+
+
+.landing {
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+/* 
+.header {
+  position: absolute;
+  top:0;
+  left: 0;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vmin;
+  min-width: 100vw;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+} */
+
+.header::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('./Assets/land.jpg');
+  background-color: rgba(0,0,0,1);
+}
+
+.heading {
+  font-size: 15vmin;
   color: white;
+  font-family: 'Righteous';
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+
+
+
+
+/* Responsiveness for Mobiles */
+@media only screen and (max-width: 767px) {
+  .landing::before{
+    filter: blur(50px);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Responsiveness for Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* Responsiveness for Small Desktops */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  
+}
+
+
+/* Responsiveness for Medium Desktops */
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  
+}
+
+
+/* Responsivesness for Large Desktops */
+@media only screen and (min-width: 1440px) {
+  
 }
